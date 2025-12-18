@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhannu Yadav - MERN Stack Developer</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles: Minimal styling for scrollbar and font -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; /* gray-800 */ }
+        ::-webkit-scrollbar-thumb { background: #374151; /* gray-700 */ border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; /* gray-600 */ }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+
+    <!-- Header / Navigation (Fixed and Sticky) -->
+    <header class="bg-gray-900/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-xl">
+        <nav class="container mx-auto max-w-7xl px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-cyan-400">
+                &lt;Dhannu Yaduvanshi /&gt;
+            </a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#home" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">About</a>
+                <a href="#experience" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">Experience</a>
+                <a href="#education" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">Education</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">Projects</a>
+                <a href="#certificates" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">Certificates</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-cyan-400 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-cyan-400 rounded-lg p-2 transition duration-300">
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 bg-gray-900 shadow-inner">
+            <a href="#home" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300 border-b border-gray-800">Home</a>
+            <a href="#about" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300 border-b border-gray-800">About</a>
+            <a href="#experience" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300 border-b border-gray-800">Experience</a>
+            <a href="#education" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300 border-b border-gray-800">Education</a>
+            <a href="#projects" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300 border-b border-gray-800">Projects</a>
+            <a href="#certificates" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300 border-b border-gray-800">Certificates</a>
+            <a href="#contact" class="nav-link-mobile block text-gray-300 hover:text-cyan-400 py-1 transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Home / Hero -->
+        <section id="home" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-900 pt-16">
+            <div class="container mx-auto max-w-7xl px-6 text-center">
+                <span class="text-cyan-400 font-medium tracking-wider">Hi, my name is</span>
+                <h1 class="text-4xl md:text-7xl font-extrabold mt-2 mb-4">
+                    [Dhananjay Yadav].
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-semibold text-gray-400 mb-8">
+                    I build things for the web.
+                </h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-10">
+                    I'm a **MERN stack developer** specializing in building (and occasionally designing) exceptional, high-quality web applications using modern front-end technologies. Trained in both front-end and back-end development.
+                </p>
+                <a href="#projects" class="bg-cyan-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-cyan-400 transition duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1 inline-block">
+                    View My Work
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: About (Introduction & Skills) -->
+        <section id="about" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-800">
+            <div class="container mx-auto max-w-7xl px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="text-cyan-400">01.</span> About Me & Core Stack
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
+                    
+                    <!-- Text Content (Introduction Narrative) -->
+                    <div class="md:col-span-3">
+                        <p class="text-lg text-gray-300 mb-4">
+                            Hello! I'm [Dhananjay Yadav], a passionate software developer with a focus on the **MERN stack** (MongoDB, Express, React, Node.js). My journey into web development started with a curiosity for how things work, and it has grown into a full-fledged passion for building robust and user-friendly applications.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-6">
+                            I thrive on solving complex problems and enjoy the creative process of turning ideas into reality, from efficient database modeling to clean, responsive user interfaces. I'm always eager to learn new technologies and contribute to innovative projects.
+                        </p>
+                        <h3 class="text-2xl font-semibold text-gray-100 mb-4 mt-8">My Core Tech Stack</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Skills -->
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">MongoDB</span>
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">Express.js</span>
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">React/Redux</span>
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">Node.js</span>
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">JavaScript</span>
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">Tailwind CSS</span>
+                            <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">Git/GitHub</span>
+                             <span class="bg-gray-700 text-cyan-300 py-2 px-4 rounded-full font-medium text-sm transition hover:bg-cyan-500 hover:text-gray-900 shadow-md">Postman Api</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Image and Social Links -->
+                    <div class="md:col-span-2 flex flex-col items-center justify-center pt-8">
+                        <img src="../Dhannu_Yadav/Dhannu.jpg" 
+                             alt="A photo of [Dhannu Yaduvanshi]" 
+                             class="rounded-xl shadow-2xl w-full max-w-xs object-cover border-4 border-cyan-500/50 transition duration-500 hover:shadow-cyan-500/40"
+                             onerror="this.src='https://placehold.co/300x300/1f2937/76e6f2?text=Image+Not+Found'">
+                        
+                        <!-- Social Links -->
+                        <div class="flex space-x-6 mt-6">
+                            <!-- GitHub Icon -->
+                            <a href="https://github.com/Ydv-Dhannu14" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition duration-300" title="GitHub">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd" /></svg>
+                            </a>
+                            <!-- LinkedIn Icon -->
+                            <a href="https://www.linkedin.com/in/ydv-dhannu14/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition duration-300" title="LinkedIn">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Experience -->
+        <section id="experience" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-900">
+            <div class="container mx-auto max-w-4xl px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="text-cyan-400">02.</span> Professional Experience
+                </h2>
+
+                <div class="space-y-12">
+                    
+                    <!-- Job 1 -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:border-l-4 border-cyan-500 transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-2xl font-bold text-gray-100">MERN Stack Developer</h3>
+                            <span class="text-sm text-gray-400 font-medium mt-1 sm:mt-0">June 2025 - Present</span>
+                        </div>
+                        <p class="text-cyan-400 text-lg font-semibold mb-4">Trainee--QSpiders, JSpiders. Noida, Delhi</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-3 pl-4">
+                            <li>Developed and maintained high-traffic RESTful APIs using **Node.js** and **Express**, improving data retrieval efficiency.</li>
+                            <li>Led the front-end redesign using **React** and **Tailwind CSS**, resulting in a 20% increase in user engagement metrics.</li>
+                            <li>Implemented **MongoDB** indexing and aggregation pipelines to optimize complex reporting queries.</li>
+                            <li>Collaborated with design teams to translate wireframes into responsive, cross-browser compatible user interfaces.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <!-- <div class="bg-gray-800 p-8 rounded-xl shadow-2xl hover:border-l-4 border-cyan-500 transition duration-300">
+                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-2xl font-bold text-gray-100">Junior Web Developer</h3>
+                            <span class="text-sm text-gray-400 font-medium mt-1 sm:mt-0">Jul 2020 - Dec 2021</span>
+                        </div>
+                        <p class="text-cyan-400 text-lg font-semibold mb-4">Digital Solutions Agency, Remote</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-3 pl-4">
+                            <li>Contributed to the development of five client websites using JavaScript, HTML, and CSS.</li>
+                            <li>Assisted senior developers in debugging and testing new features for a legacy application.</li>
+                            <li>Managed version control and deployment processes using **Git** and Docker.</li>
+                        </ul>
+                    </div> -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Education -->
+        <section id="education" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-800">
+            <div class="container mx-auto max-w-4xl px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    <span class="text-cyan-400">03.</span> Education
+                </h2>
+
+                <div class="space-y-12">
+                    
+                    <!-- Degree 1 -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-2xl hover:border-l-4 border-cyan-500 transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-2xl font-bold text-gray-100">B.Tech Computer Science</h3>
+                            <span class="text-sm text-gray-400 font-medium mt-1 sm:mt-0">2020 - 2024</span>
+                        </div>
+                        <p class="text-cyan-400 text-lg font-semibold mb-2">Dr. APJ Abdul Kalam Technical University Lucknow, Uttar Pradesh</p>
+                        <p class="text-gray-300 text-base">Relevant Coursework: Data Structures and Algorithms, Computer Network, Web Development.</p>
+                        <!-- <p class="text-gray-300 text-base mt-1">Honors: **Magna Cum Laude**</p> -->
+                    </div>
+
+                    <!-- Degree 2 (Optional) -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-2xl hover:border-l-4 border-cyan-500 transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-2xl font-bold text-gray-100">High School Diploma</h3>
+                            <span class="text-sm text-gray-400 font-medium mt-1 sm:mt-0">2018 - 2020</span>
+                        </div>
+                        <p class="text-cyan-400 text-lg font-semibold mb-2">GOVT Jubilee Inter College, Gorakhpur, Uttar Pradesh</p>
+                        <p class="text-gray-300 text-base">Focus: Mathematics and Science.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+  <!-- Projects Section -->
+        <section id="projects" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-900">
+            <div class="container mx-auto max-w-7xl px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    <span class="text-cyan-400">04.</span> Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                        <img src="../Dhannu_Yadav/image1.png" alt="Project One" class="rounded-t-lg"
+                             onerror="this.src='https://placehold.co/600x400/1a202c/76e6f2?text=Image+Not+Found'">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3">Study Notion Ed-Tech Platform</h3>
+                            <p class="text-gray-400 mb-4">
+                                Study Notion is a fully functional Ed-Tech platform that enables users to create, consume, and rate educational content.
+                                *Developed the front-end using React, create a responsive and intuitive use interface.
+                                *Built scalable back-end Logic using Node.js, ensuring smooth communication between client and server.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">React</span>
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">Node.js</span>
+                                     <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">Express.js</span>
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">MongoDB</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <a href="https://github.com/Ydv-Dhannu14" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400" title="GitHub">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd" /></svg>
+                                    </a>
+                                    <a href="http://study-notion-beta-lac.vercel.app" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400" title="Live Demo">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                        <img src="../Dhannu_Yadav/image2.png" alt="Project Two" class="rounded-t-lg"
+                             onerror="this.src='https://placehold.co/600x400/1a202c/76e6f2?text=Image+Not+Found'">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3">Crud App</h3>
+                            <p class="text-gray-400 mb-4">
+                                A responsive Crud-based Employee management System built using React and tailwindcss.
+                                *Developed a responsive interface using React and tailwindcss, including Employee Management, Login and Signup pages. 
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">React</span>
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">Tailwind</span>
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">CSS</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <a href="https://github.com/Ydv-Dhannu14" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400" title="GitHub">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd" /></svg>
+                                    </a>
+                                    <a href="http://crud-app-gules-zeta.vercel.app" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400" title="Live Demo">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+                        <img src="../Dhannu_Yadav/image3.png" alt="Project Three" class="rounded-t-lg"
+                             onerror="this.src='https://placehold.co/600x400/1a202c/76e6f2?text=Image+Not+Found'">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3">Shopping Cart Application</h3>
+                            <p class="text-gray-400 mb-4">
+                                A responsive Shopping Cart Applicaton built using React and Tailwind CSS design to provide a smooth online shopping experience.
+                                *Implemented Add to Cart, Remove and Quantity Update features using React state management.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex space-x-2">
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">REACT</span>
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">Tailwind</span>
+                                    <span class="bg-gray-700 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full">CSS</span>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <a href="https/github.com/[your-username]/[repo]" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400" title="GitHub">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd" /></svg>
+                                    </a>
+                                    <a href="[live-demo-url]" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400" title="Live Demo">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                   
+                </div>
+            </div>
+        </section>
+       
+
+
+
+                      <section id="certificates" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-800">
+    <div class="container mx-auto max-w-7xl px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">
+            <span class="text-cyan-400">05.</span> Certifications & Training
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-gray-900 rounded-xl shadow-2xl p-6 border-2 border-transparent transition duration-300 hover:border-cyan-500/50">
+                <div class="text-cyan-400 mb-4">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2"> MERN Full-Stack Development</h3>
+                <p class="text-gray-400 mb-4 text-sm">Issued by J Spiders/ Q Spiders / 13th Dec 2025</p>
+                <p class="text-gray-300 mb-4 text-base">
+                    Comprehensive program covering state management (Redux/Context), authentication (JWT), and deployment best practices for MERN applications.
+                </p>
+                
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="../Dhannu_Yadav/certificate.jpeg" alt="Certificate of Completion for MERN Stack Bootcamp" class="w-full h-auto object-cover">
+                </div>
+
+                
+            </div>
+            </div>
+    </div>
+</section>
+
+
+        
+                    <!-- Certificate Card 3 -->
+          
+          <!-- <div className="w-full lg:w-1/2">
+        <div className="bg-gray-900 rounded-xl shadow-2xl p-6 border-2 border-transparent transition duration-300 hover:border-cyan-500/50">
+          
+          <div className="text-cyan-400 mb-4">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+
+          <h3 className="text-xl font-bold mb-2">
+            MERN Full-Stack Development
+          </h3>
+
+          <p className="text-gray-400 mb-4 text-sm">
+            Issued by Code Help / 10th July 2024
+          </p>
+
+          <p className="text-gray-300 mb-4 text-base">
+            Comprehensive program covering Redux, JWT authentication,
+            and deployment best practices for MERN apps.
+          </p>
+
+          <div className="overflow-hidden rounded-lg">
+            <img
+              src="/Dhannu-certificate.png"
+              alt="MERN Certificate"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+        </div>
+      </div> -->
+
+
+
+        <!-- Section 7: Contact -->
+        <section id="contact" class="min-h-screen flex items-center justify-center py-20 px-4 bg-gray-900">
+            <div class="container mx-auto max-w-3xl px-6 text-center">
+                <h2 class="text-4xl font-bold text-center mb-6">
+                    <span class="text-cyan-400">06.</span> Get In Touch
+                </h2>
+                <p class="text-lg text-gray-300 mb-10 max-w-xl mx-auto">
+                    Whether you have a question or just want to say hi, my inbox is always open.
+                </p>
+                
+                <!-- CONTACT INFORMATION BLOCK -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12">
+                    <!-- Email -->
+                    <!-- <div class="flex flex-col items-center space-y-1 bg-gray-800 p-4 rounded-xl shadow-xl hover:shadow-cyan-500/30 transition duration-300">
+                        <span class="text-cyan-400 text-xl font-bold">Email:</span>
+                        <a href="mailto:your.email@example.com" class="text-gray-300 hover:text-cyan-300 transition duration-200">[yddhananjay7520@gmail.com]</a>
+                    </div> -->
+                    <!-- Mobile Number -->
+                    <div class="flex flex-col items-center space-y-1 bg-gray-800 p-4 rounded-xl shadow-xl hover:shadow-cyan-500/30 transition duration-300">
+                        <span class="text-cyan-400 text-xl font-bold">Mobile:</span>
+                        <a href="tel:+15551234567" class="text-gray-300 hover:text-cyan-300 transition duration-200">[+91 (7520942845)]</a>
+                    </div>
+                </div>
+                <!-- END CONTACT INFORMATION BLOCK -->
+
+                <p class="text-lg text-gray-400 mb-8 max-w-xl mx-auto">
+                    Alternatively, you can send me a message directly using the form below:
+                </p>
+
+                <form id="contact-form" class="w-full max-w-lg mx-auto p-6 bg-gray-800 rounded-xl shadow-2xl">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2 text-left" for="grid-name">
+                                Name
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition duration-200" id="grid-name" type="text" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2 text-left" for="grid-email">
+                                Email
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition duration-200" id="grid-email" type="email" placeholder="yadav@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2 text-left" for="grid-message">
+                                Message
+                            </label>
+                            <textarea class="appearance-none block w-full bg-gray-700 text-gray-100 border border-gray-600 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 h-48 resize-none transition duration-200" id="grid-message" placeholder="Your message..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <button class="bg-cyan-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-cyan-400 transition duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1" type="submit">
+                            Send Message
+                        </button>
+                        <div id="form-status" class="mt-4 text-lg font-medium"></div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-700">
+        <div class="container mx-auto max-w-7xl px-6 text-center text-gray-500 text-sm">
+            <p>&copy;  [Made With ❤ Dhannu Yaduvanshi].</p>
+            <!-- <p>Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p> -->
+        </div>
+    </footer>
+
+    <!-- All JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Mobile Menu Functionality
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+
+            // Toggles mobile menu visibility
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Closes mobile menu when any link is clicked (for seamless navigation)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // 2. Contact Form Simulation Logic
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission success
+                
+                // Show success message
+                formStatus.textContent = 'Message Sent! I will be in touch soon.';
+                formStatus.classList.remove('text-red-400');
+                formStatus.classList.add('text-green-400');
+                
+                // Clear form inputs
+                contactForm.reset();
+                
+                // Remove message after 5 seconds
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                    formStatus.classList.remove('text-green-400');
+                }, 5000);
+            });
+
+            // 3. Active Navigation Link Highlighting on Scroll
+            // This grabs all section elements.
+            const sections = document.querySelectorAll('section');
+            const desktopNavLinks = document.querySelectorAll('nav .nav-link');
+
+            // Options for the Intersection Observer (adjusts when the link becomes active)
+            const observerOptions = {
+                 // The root is the viewport
+                root: null, 
+                // Margin shifts the trigger point up 30% from the bottom of the viewport
+                rootMargin: '-30% 0px -30% 0px', 
+                // Trigger when 10% of the section is visible
+                threshold: 0.1 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        
+                        // Loop through desktop links and reset styling
+                        desktopNavLinks.forEach(link => {
+                            link.classList.remove('text-cyan-400', 'font-bold');
+                            link.classList.add('text-gray-300', 'font-medium');
+                            
+                            // Highlight the link corresponding to the intersecting section
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('text-cyan-400', 'font-bold');
+                                link.classList.remove('text-gray-300');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Start observing all sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
